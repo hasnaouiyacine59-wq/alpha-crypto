@@ -1,9 +1,10 @@
 import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
-import { searchPairs, getTrendingCoins, fmt } from '../utils/api'
+import { searchPairs, fmt } from '../utils/api'
 import { CHAIN_LIST } from '../utils/chains'
 import { useApp } from '../context/AppContext'
 import PairCard from '../components/PairCard'
+import Typewriter from '../components/Typewriter'
 import clsx from 'clsx'
 
 export default function HomePage() {
@@ -11,6 +12,8 @@ export default function HomePage() {
   const [pairs, setPairs] = useState([])
   const [loading, setLoading] = useState(true)
   const [sortBy, setSortBy] = useState('volume')
+  const [line1Done, setLine1Done] = useState(false)
+  const [line2Done, setLine2Done] = useState(false)
 
   useEffect(() => {
     setLoading(true)
@@ -43,14 +46,33 @@ export default function HomePage() {
             Real-time DEX Analytics · 8+ Chains · 50+ DEXs
           </div>
 
-          <h1 className="text-5xl md:text-6xl font-bold leading-tight">
-            <span className="text-text-primary">Track Every Token</span><br />
-            <span className="text-gradient">on Every Chain</span>
+          <h1 className="text-5xl md:text-6xl font-bold leading-tight min-h-[2.5em]">
+            <Typewriter
+              text="Track Every Token"
+              speed={50}
+              className="text-text-primary block"
+              onDone={() => setLine1Done(true)}
+            />
+            {line1Done && (
+              <Typewriter
+                text="on Every Chain"
+                speed={50}
+                className="text-gradient block"
+                onDone={() => setLine2Done(true)}
+              />
+            )}
           </h1>
 
-          <p className="text-text-muted text-lg max-w-xl mx-auto leading-relaxed">
-            Real-time charts, security analysis, portfolio tracking and token swap — all in one place.
-          </p>
+          <div className="min-h-[3.5rem]">
+            {line2Done && (
+              <p className="text-text-muted text-lg max-w-xl mx-auto leading-relaxed animate-fade-in">
+                <Typewriter
+                  text="Real-time charts, security analysis, portfolio tracking and token swap — all in one place."
+                  speed={18}
+                />
+              </p>
+            )}
+          </div>
 
           <div className="flex items-center justify-center gap-3 pt-2">
             <Link to="/trending" className="btn-primary text-base px-6 py-3">
