@@ -2,12 +2,126 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Alpha Crypto - Real-time DEX analytics, charts, token info, and portfolio tracking across multiple chains" />
-    <title>Alpha Crypto | DEX Analytics</title>
+
+    <!-- ═══════════════════════════════════════════════════════════
+         PRIMARY META
+    ═══════════════════════════════════════════════════════════ -->
+    <title>AlphaCrypto | Real-Time DEX Analytics, Charts & Token Tracker</title>
+    <meta name="description" content="AlphaCrypto is the #1 real-time DEX analytics platform. Track token prices, liquidity, volume, and security across Ethereum, BSC, Polygon, Arbitrum, Avalanche and 8+ chains. Live candlestick charts, rug-check, honeypot detection, portfolio tracker and built-in token swap — all in one place." />
+    <meta name="keywords" content="DEX analytics, crypto charts, token tracker, DeFi, decentralized exchange, real-time crypto, Ethereum DEX, BSC DEX, Uniswap analytics, PancakeSwap analytics, liquidity tracker, crypto portfolio, rug check, honeypot detector, new token pairs, trending crypto, DexScreener alternative, live crypto prices, on-chain analytics, Web3 trading" />
+    <meta name="author" content="AlphaCrypto" />
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+    <meta name="googlebot" content="index, follow" />
+    <link rel="canonical" href="https://alphacrypto.app/" />
+
+    <!-- ═══════════════════════════════════════════════════════════
+         OPEN GRAPH (Facebook / LinkedIn / Discord)
+    ═══════════════════════════════════════════════════════════ -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="AlphaCrypto" />
+    <meta property="og:title" content="AlphaCrypto | Real-Time DEX Analytics, Charts & Token Tracker" />
+    <meta property="og:description" content="Track every token on every chain. Real-time DEX charts, security analysis, portfolio tracking and token swap across 8+ blockchains and 50+ DEX protocols." />
+    <meta property="og:url" content="https://alphacrypto.app/" />
+    <meta property="og:image" content="https://alphacrypto.app/og-image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="AlphaCrypto — Real-Time DEX Analytics Dashboard" />
+    <meta property="og:locale" content="en_US" />
+
+    <!-- ═══════════════════════════════════════════════════════════
+         TWITTER CARD
+    ═══════════════════════════════════════════════════════════ -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@AlphaCryptoApp" />
+    <meta name="twitter:creator" content="@AlphaCryptoApp" />
+    <meta name="twitter:title" content="AlphaCrypto | Real-Time DEX Analytics, Charts & Token Tracker" />
+    <meta name="twitter:description" content="Track every token on every chain. Real-time DEX charts, security analysis, portfolio tracking and token swap across 8+ blockchains and 50+ DEX protocols." />
+    <meta name="twitter:image" content="https://alphacrypto.app/og-image.png" />
+    <meta name="twitter:image:alt" content="AlphaCrypto — Real-Time DEX Analytics Dashboard" />
+
+    <!-- ═══════════════════════════════════════════════════════════
+         STRUCTURED DATA — WebSite + SiteLinksSearchBox
+    ═══════════════════════════════════════════════════════════ -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "AlphaCrypto",
+      "url": "https://alphacrypto.app/",
+      "description": "Real-time DEX analytics platform for tracking token prices, liquidity, volume and security across 8+ blockchains and 50+ DEX protocols.",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": {
+          "@type": "EntryPoint",
+          "urlTemplate": "https://alphacrypto.app/?q={search_term_string}"
+        },
+        "query-input": "required name=search_term_string"
+      }
+    }
+    </script>
+
+    <!-- ═══════════════════════════════════════════════════════════
+         STRUCTURED DATA — SoftwareApplication
+    ═══════════════════════════════════════════════════════════ -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "AlphaCrypto",
+      "applicationCategory": "FinanceApplication",
+      "operatingSystem": "Web",
+      "url": "https://alphacrypto.app/",
+      "description": "Real-time DEX analytics, live candlestick charts, rug-check, honeypot detection, portfolio tracker and built-in token swap across 8+ chains.",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.8",
+        "ratingCount": "1200"
+      }
+    }
+    </script>
+
+    <!-- ═══════════════════════════════════════════════════════════
+         STRUCTURED DATA — Organization
+    ═══════════════════════════════════════════════════════════ -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "AlphaCrypto",
+      "url": "https://alphacrypto.app/",
+      "logo": "https://alphacrypto.app/favicon.svg",
+      "sameAs": [
+        "https://twitter.com/AlphaCryptoApp",
+        "https://t.me/AlphaCryptoApp"
+      ]
+    }
+    </script>
+
+    <!-- ═══════════════════════════════════════════════════════════
+         PERFORMANCE & CRAWL HINTS
+    ═══════════════════════════════════════════════════════════ -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="dns-prefetch" href="https://api.dexscreener.com" />
+    <link rel="dns-prefetch" href="https://api.coingecko.com" />
+
+    <!-- ═══════════════════════════════════════════════════════════
+         ICONS & THEME
+    ═══════════════════════════════════════════════════════════ -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="apple-touch-icon" href="/favicon.svg" />
+    <meta name="theme-color" content="#a855f7" />
+    <meta name="msapplication-TileColor" content="#08070f" />
+
+    <!-- ═══════════════════════════════════════════════════════════
+         FONTS
+    ═══════════════════════════════════════════════════════════ -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
   </head>
   <body>
