@@ -8,6 +8,7 @@ import TransactionHistory from '../components/TransactionHistory'
 import SecurityPanel from '../components/SecurityPanel'
 import TokenomicsPanel from '../components/TokenomicsPanel'
 import SwapPanel from '../components/SwapPanel'
+import AdBanner from '../components/AdBanner'
 import clsx from 'clsx'
 
 export default function PairPage() {
@@ -190,6 +191,9 @@ export default function PairPage() {
           {rightTab === 'tokenomics' && (
             <div className="p-4"><TokenomicsPanel pair={pair} /></div>
           )}
+          <div className="p-3 mt-auto">
+            <AdBanner slot="rectangle" className="mx-auto" />
+          </div>
         </div>
       </div>
     </div>

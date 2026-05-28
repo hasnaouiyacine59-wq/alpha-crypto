@@ -5,6 +5,7 @@ import { CHAIN_LIST } from '../utils/chains'
 import { useApp } from '../context/AppContext'
 import PairCard from '../components/PairCard'
 import Typewriter from '../components/Typewriter'
+import AdBanner from '../components/AdBanner'
 import clsx from 'clsx'
 
 export default function HomePage() {
@@ -37,6 +38,9 @@ export default function HomePage() {
       <div className="orb orb-purple w-[300px] h-[300px] top-96 -right-20 opacity-30" />
 
       <div className="relative max-w-7xl mx-auto px-4 py-10 space-y-12">
+
+        {/* Ad banner — top */}
+        <AdBanner slot="leaderboard" className="mt-2" />
 
         {/* Hero */}
         <div className="text-center space-y-6 pt-6">
@@ -151,6 +155,9 @@ export default function HomePage() {
             </div>
           </div>
         )}
+
+        {/* Ad banner — mid page */}
+        <AdBanner slot="billboard" />
 
         {/* Hot pairs */}
         <div>

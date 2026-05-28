@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { getNewPairs, searchPairs, fmt } from '../utils/api'
 import { CHAIN_LIST } from '../utils/chains'
+import AdBanner from '../components/AdBanner'
 import clsx from 'clsx'
 
 export default function NewPairsPage() {
@@ -27,6 +28,7 @@ export default function NewPairsPage() {
 
   return (
     <div className="max-w-6xl mx-auto px-4 py-6">
+      <AdBanner slot="leaderboard" className="mb-6" />
       <div className="flex items-center justify-between mb-6">
         <div className="flex items-center gap-3">
           <span className="text-2xl">🆕</span>
@@ -114,6 +116,7 @@ export default function NewPairsPage() {
           </table>
         </div>
       )}
+      <AdBanner slot="leaderboard" className="mt-6" />
     </div>
   )
 }

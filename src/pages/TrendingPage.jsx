@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import { getTrendingCoins, searchPairs, fmt } from '../utils/api'
 import { useApp } from '../context/AppContext'
 import { CHAIN_LIST } from '../utils/chains'
+import AdBanner from '../components/AdBanner'
 import clsx from 'clsx'
 
 const SORT_OPTIONS = ['rank', 'change', 'volume', 'liquidity']
@@ -66,6 +67,9 @@ export default function TrendingPage() {
       <div className="orb orb-purple w-96 h-96 -top-20 right-0 opacity-20" />
       <div className="max-w-7xl mx-auto px-4 py-8 space-y-6 relative">
 
+        {/* Ad banner — top */}
+        <AdBanner slot="leaderboard" />
+
         {/* Header */}
         <div className="flex items-start justify-between gap-4 flex-wrap">
           <div>
@@ -109,6 +113,11 @@ export default function TrendingPage() {
               </button>
             ))}
           </div>
+        )}
+
+        {/* Ad banner — shown once data is loaded */}
+        {tab === 'pairs' && !loading && sorted.length > 0 && (
+          <AdBanner slot="billboard" />
         )}
 
         {/* Pairs table */}
