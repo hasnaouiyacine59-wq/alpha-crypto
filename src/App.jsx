@@ -26,8 +26,13 @@ export default function App() {
             <Route path="/portfolio" element={<PortfolioPage />} />
           </Routes>
         </main>
-        <footer className="border-t border-border py-4 px-6 text-center text-xs text-text-muted">
-          © 2024 AlphaCrypto · Real-time DEX Analytics · Not financial advice
+        <footer className="border-t border-border/60 py-5 px-6 text-center text-xs text-text-muted"
+          style={{ background: 'rgba(14,12,26,0.8)' }}>
+          <span className="text-gradient font-semibold">AlphaCrypto</span>
+          <span className="mx-2 text-border">·</span>
+          Real-time DEX Analytics
+          <span className="mx-2 text-border">·</span>
+          Not financial advice
         </footer>
       </div>
       <Toaster
