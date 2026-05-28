@@ -68,7 +68,7 @@ export default function TrendingPage() {
       <div className="max-w-7xl mx-auto px-4 py-8 space-y-6 relative">
 
         {/* Ad banner — top */}
-        <AdBanner slot="leaderboard" />
+        <AdBanner />
 
         {/* Header */}
         <div className="flex items-start justify-between gap-4 flex-wrap">
@@ -117,7 +117,7 @@ export default function TrendingPage() {
 
         {/* Ad banner — shown once data is loaded */}
         {tab === 'pairs' && !loading && sorted.length > 0 && (
-          <AdBanner slot="billboard" />
+          <AdBanner />
         )}
 
         {/* Pairs table */}

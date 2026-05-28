@@ -192,7 +192,7 @@ export default function PairPage() {
             <div className="p-4"><TokenomicsPanel pair={pair} /></div>
           )}
           <div className="p-3 mt-auto">
-            <AdBanner slot="rectangle" className="mx-auto" />
+            <AdBanner className="mx-auto" />
           </div>
         </div>
       </div>
