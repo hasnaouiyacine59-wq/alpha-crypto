@@ -18,8 +18,8 @@ export default function AdBanner({ className = '' }) {
   return (
     <div ref={ref} style={{ width: '100%', margin: 'auto', position: 'relative', zIndex: 99998 }} className={className}>
       <iframe
-        data-aa="2439534"
-        src="//acceptable.a-ads.com/2439534/?size=Adaptive"
+        data-aa="2439743"
+        src="//acceptable.a-ads.com/2439743/?size=Adaptive"
         style={{ border: 0, padding: 0, width: '70%', height: 'auto', overflow: 'hidden', display: 'block', margin: 'auto' }}
         title="Advertisement"
       />
